@@ -1,3 +1,5 @@
+var Grid = require('./grid');
+
 function GameManager(size, InputManager, Actuator) {
     this.size = size;   //size of grid
     this.inputManager = new InputManager;
@@ -20,5 +22,7 @@ GameManager.prototype.restart = function () {
 GameManager.prototype.setup = function () {
     this.grid = new Grid(this.size);
 }
+
+
 
 module.exports = GameManager;
