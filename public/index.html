@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -58,39 +61,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Wait till the browser is ready to render the game (avoid glitches)
-        document.addEventListener("DOMContentLoaded", function () {
-            window.requestAnimationFrame(function () {
-                var manager = new GameManager(4, KeyboardInputManager, HTMLActuator);
-            });
-        });
-
-        function GameManager(size, InputManager, Actuator) {
-            this.size = size;   //size of grid
-            this.inputManager = new InputManager;
-            this.actuator = new Actuator;
-
-            this.startTiles = 2;
-
-            this.inputManager.on("move", this.move.bind(this));
-            this.inputManager.on("restart", this.restart.bind(this));
-            this.setup();
-        }   
-        
-        // Restart the game
-        GameManager.prototype.restart = function () {
-            this.actuator.restart();
-            this.setup();
-        }
-
-        // Set up the game
-        GameManager.prototype.setup = function () {
-            this.grid = new Grid(this.size);
-        }
-    </script>
-
 </body>
 
 </html>
