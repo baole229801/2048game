@@ -1,0 +1,22 @@
+{
+  "name": "2048game",
+  "version": "1.0.0",
+  "description": "this is 2048 game project for DSA Course-IU.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baole229801/2048game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baole229801/2048game/issues"
+  },
+  "homepage": "https://github.com/baole229801/2048game#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
